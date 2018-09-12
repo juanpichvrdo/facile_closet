@@ -1,0 +1,127 @@
+.plans {
+    margin-top: 10rem;
+    grid-row: 5 / 6;
+    grid-column: 2 / 14;
+
+    @media only screen and (max-width: 1100px) {
+        grid-column: 1 / -1;
+    }
+
+    ul {
+        list-style: square inside;
+    }
+
+    &__container {
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 1.6rem;
+        box-shadow: 0 .8rem .4rem rgba(0, 0, 0, .2);
+
+        @media only screen and (max-width: 650px) {
+            grid-template-rows: repeat(2, min-content);
+            
+        }
+
+        & > * {
+            background-size: cover;
+            background-position: center;
+            padding: 7rem 10rem 10rem;
+        
+            display: grid;
+            grid-template-rows: 15% 70% 15%;
+            grid-row-gap: 2rem;
+            justify-items: center;
+
+            @media only screen and (max-width: 1200px) {
+                padding: 4rem 5rem 5rem;
+                grid-template-rows: 15% 70% 15%;
+            }
+
+            @media only screen and (max-width: 930px) {
+                padding: 2rem 3.5rem 3.5rem;
+                grid-row-gap: 1rem;
+            }
+
+            @media only screen and (max-width: 400px) {
+                padding: 1rem 2rem 2rem;
+            }
+
+            
+            
+        }
+    }
+
+    &__starter {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../img/starter__img.jpg);
+        
+        @media only screen and (max-width: 650px) {
+            grid-column: 1 / -1;
+            grid-row: 1 / span 1;    
+        }
+
+        &--heading {
+            color: $blue;
+
+            &::after {
+                background-color: $blue;
+            }
+        }
+
+        &--list {
+            margin-top: 2rem;
+        }
+
+        &--feature {
+            color: $blue;
+            margin: 2rem 0;
+
+            &:first-child {
+                margin: 0;
+            }
+        }
+
+        &--btn {
+            background-color: $white;
+            align-self: center;
+            color: $blue;
+            margin-bottom: 5rem;
+
+            @media only screen and (max-width: 930px) {
+                margin-bottom: 8rem;;
+            }
+        }
+    }
+
+    &__luxury {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/luxury__img.jpeg);
+
+        @media only screen and (max-width: 650px) {
+            grid-column: 1 / -1;
+            grid-row: 2 / span 1;    
+        }
+
+        &--list {
+            margin-top: 2rem;
+        }
+
+        &--feature {
+            margin: 2.5rem 0;
+
+            &:first-child {
+                margin: 0;
+            }
+        }
+
+        &--btn {
+            background-color: $navy;
+            align-self: center;
+            color: $red;
+            margin-bottom: 5rem;
+
+            @media only screen and (max-width: 930px) {
+                margin-bottom: 8rem;;
+            }
+        }
+    }
+}

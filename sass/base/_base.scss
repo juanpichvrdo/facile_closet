@@ -1,0 +1,36 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+    overflow-x: hidden;
+
+    @media only screen and (max-width: 1160px) {
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: 780px) {
+        font-size: 45%;
+    }
+
+
+}
+
+img {
+    display: block;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.container {
+    background: rgb(30,45,57);
+    background: linear-gradient(83deg, rgba(30,45,57,1) 0%, rgba(46,67,82,1) 44%, rgba(192,89,109,0.9044350161939776) 100%); 
+    background-repeat: no-repeat;
+}

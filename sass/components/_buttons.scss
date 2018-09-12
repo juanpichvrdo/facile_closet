@@ -1,0 +1,44 @@
+
+.btn {
+    border: none;
+    padding: 1.3rem 5rem;
+    border-radius: 5px;
+    font-size: 2.5rem;
+    box-shadow: 1px .5rem .8rem rgba(0, 0, 0, .3);
+    transition: all .3s;
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover {
+        box-shadow: 3px 1rem 1.3rem rgba(0, 0, 0, .3);
+    }
+
+    &:active {
+        transform: translateY(-.2rem);
+    }
+
+    @media only screen and (max-width: 500px) {
+        padding: 1rem 3rem;
+    }
+}
+
+.cta, .learn-more { color: $white; }
+
+.cta {
+    background-color: $red;
+    transition: all .2s;
+
+    &:hover { background-color: darken($red, 3%); }
+
+    &:active {
+        color: $navy;
+        transform: translateY(-.2rem);
+    }
+}
+
+.learn-more {
+    background-color: $blue;
+    transition: all .2s;
+
+    &:hover { background-color: darken($blue, 3%); }
+}
